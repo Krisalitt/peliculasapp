@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class PeliculasService {
 
-  private apikey = '';
+  private apikey = '87e089adb74f6a896637dcbf04753774';
   private urlMoviedb = 'https://api.themoviedb.org/3';
 
   constructor( private jsonp: Jsonp ) { console.log('conecta3'); }

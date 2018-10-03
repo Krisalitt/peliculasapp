@@ -8,7 +8,4 @@ import { PeliculasService } from './services/peliculas.service';
 })
 export class AppComponent {
   title = 'peliculasapp';
-  constructor(_peliculasService: PeliculasService) {
-
-  }
 }

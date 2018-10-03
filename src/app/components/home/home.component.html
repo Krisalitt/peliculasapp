@@ -1,3 +1,17 @@
-<p>
-  home works!
-</p>
+<div class="row animated fadeIn">
+    <h3>Populares</h3>
+    <hr>
+    <div class="col-md-12">
+        <div class="collage-container">
+            <img *ngFor="let movie of movies; let i = index" class="collage-img c{{i+1}} puntero" [src]="'http://image.tmdb.org/t/p/w300/'+movie.poster_path">
+
+
+            <!-- <img class="collage-img c2 puntero" src="http://image.tmdb.org/t/p/w300/fgsHxz21B27hOOqQBiw9L6yWcM7.jpg" alt="www.Entheosweb.com">
+            <img class="collage-img c3 puntero" src="http://image.tmdb.org/t/p/w300/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg" alt="www.Entheosweb.com">
+            <img class="collage-img c4 puntero" src="http://image.tmdb.org/t/p/w300/f4E0ocYeToEuXvczZv6QArrMDJ.jpg" alt="www.Entheosweb.com">
+            <img class="collage-img c5 puntero" src="http://image.tmdb.org/t/p/w300/3s9O5af2xWKWR5JzP2iJZpZeQQg.jpg" alt="www.Entheosweb.com">
+            <img class="collage-img c6 puntero" src="http://image.tmdb.org/t/p/w500/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg" alt="www.Entheosweb.com">
+            <img class="collage-img c7 puntero" src="http://image.tmdb.org/t/p/w300/wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg" alt="www.Entheosweb.com"> -->
+        </div>
+    </div>
+</div>
