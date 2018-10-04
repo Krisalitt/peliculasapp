@@ -1,0 +1,40 @@
+import { Component } from '@angular/core';
+import { PeliculasService } from '../../services/peliculas.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styles: []
+})
+export class HomeComponent {
+  movies: any[7] = [];
+  moviesKids: any[7] = [];
+  moviestheater: any[7] = [];
+  constructor(private _pelService: PeliculasService) {
+    _pelService.getPopulars()
+      .subscribe(
+        (data: any) => {
+          console.log(data);
+          for (let i = 0; i < 7; i++) {
+            this.movies[i] = data.results[i];
+          }
+        });
+    _pelService.getPopularsKids()
+      .subscribe(
+        (data: any) => {
+          // console.log(data);
+          for (let i = 0; i < 7; i++) {
+            this.moviesKids[i] = data.results[i];
+          }
+        }
+      );
+    _pelService.getTheaterNow()
+      .subscribe(
+        (data: any) => {
+          for (let i = 0; i < 7; i++) {
+            this.moviestheater[i] = data.results[i];
+          }
+        }
+      );
+  }
+}

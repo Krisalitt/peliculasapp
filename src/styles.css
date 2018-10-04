@@ -1,1 +1,164 @@
 /* You can add global styles to this file, and also import other style files */
+
+.borderCS {
+    border: solid 2px black;
+}
+
+.main-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: white;
+    color: black !important;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 150px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+
+/* galeria de imagenes*/
+
+.collage-container {
+    width: 700px;
+    height: 500px;
+    margin: 30px auto;
+    position: relative;
+    /* border: 2px solid #777; */
+}
+
+.collage-img {
+    width: 168px;
+    height: 224px;
+    padding: 10px;
+    background: #eee;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    position: absolute;
+}
+
+.c1 {
+    z-index: 1;
+    top: 30px;
+    left: 50px;
+    transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+}
+
+.c2 {
+    z-index: 2;
+    top: 50px;
+    right: 50px;
+    transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+}
+
+.c3 {
+    z-index: 3;
+    top: 20px;
+    left: 150px;
+    transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+}
+
+.c4 {
+    z-index: 4;
+    top: 250px;
+    left: 100px;
+    transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+}
+
+.c5 {
+    z-index: 5;
+    top: 150px;
+    left: 350px;
+    transform: rotate(-40deg);
+    -o-transform: rotate(-43deg);
+    -moz-transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+}
+
+.c6 {
+    z-index: 6;
+    top: 50px;
+    left: 280px;
+    transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+}
+
+.c7 {
+    z-index: 7;
+    top: 250px;
+    left: 250px;
+    transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+}

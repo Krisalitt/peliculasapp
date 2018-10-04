@@ -1,0 +1,28 @@
+<h3>Pelicula <small>{{ movie.title }}</small></h3>
+<hr>
+<div class="row animated fadeIn">
+  <div class="col-4 text-center">
+    <img [src]="'http://image.tmdb.org/t/p/w300'+movie.poster_path"
+         class="img-fluid">
+  </div>
+  <div class="col-6 text-left">
+    <h4>Sinopsis</h4>
+    <p>{{ movie.overview }}</p>
+    <h5>Voto promedio {{ movie.vote_average }}</h5>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped"
+           [ngClass]="classProgress"
+           role="progressbar"
+           [ngStyle]="progressFill"
+           aria-valuenow="10"
+           aria-valuemin="0"
+           aria-valuemax="100">
+      </div>
+    </div>
+
+  </div>
+  <div class="col-1">
+    <button type="button"
+            class="btn btn-outline-danger">Regresar</button>
+  </div>
+</div>
