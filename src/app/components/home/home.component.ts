@@ -15,7 +15,7 @@ export class HomeComponent {
     _pelService.getPopulars()
       .subscribe(
         (data: any) => {
-          console.log(data);
+          // console.log(data);
           for (let i = 0; i < 7; i++) {
             this.movies[i] = data.results[i];
           }
@@ -40,6 +40,6 @@ export class HomeComponent {
   }
 
   goToMovie(id: string) {
-    this._route.navigate(['movie', id]);
+    this._route.navigate(['movie', id, 'home']);
   }
 }

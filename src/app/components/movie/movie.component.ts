@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieComponent {
     movie: any = {};
+    pagBack = '';
     classProgressArr: string[] = ['bg-danger', 'bg-success', 'bg-warning'];
     classProgress: string;
     progressFill: {};
@@ -16,10 +17,11 @@ export class MovieComponent {
         private _router: ActivatedRoute) {
         _router.params.subscribe(
             (param: any) => {
+                this.pagBack = `/${param['pag']}`;
                 _peliService.getMovie(param['id'])
                     .subscribe(
                         (data: any) => {
-                            console.log(data);
+                            // console.log(data);
                             this.movie = data;
                             this.setStyleProgressBar();
                         });

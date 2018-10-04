@@ -7,7 +7,7 @@ import { MovieComponent } from './components/movie/movie.component';
 const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'search', component: SearchComponent },
-    { path: 'movie/:id', component: MovieComponent },
+    { path: 'movie/:id/:pag', component: MovieComponent },
     { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 export const APP_ROUTING = RouterModule.forRoot(ROUTES);

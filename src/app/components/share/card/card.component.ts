@@ -12,6 +12,6 @@ export class CardComponent {
   }
 
   goToMovie(id: string) {
-    this._route.navigate(['movie', id]);
+    this._route.navigate(['movie', id, 'search']);
   }
 }
