@@ -1,3 +1,10 @@
-<p>
-  search works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text"
+           placeholder="Buscar película"
+           name="btnSearch"
+           #search
+           (keyup)="searchMovie(search.value)"
+           class="form-control">
+  </div>
+</div>

@@ -15,4 +15,8 @@ export class SearchComponent {
       });
   }
 
+  searchMovie(termino: string) {
+    console.log(termino);
+  }
+
 }
