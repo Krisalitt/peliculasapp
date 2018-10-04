@@ -9,6 +9,7 @@ import { SearchComponent } from './components/search/search.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { APP_ROUTING } from './app.routes';
 import { ImageUrlPipe } from './pipes/image-url.pipe';
+import { CardComponent } from './components/share/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ImageUrlPipe } from './pipes/image-url.pipe';
     HomeComponent,
     SearchComponent,
     MovieComponent,
-    ImageUrlPipe
+    ImageUrlPipe,
+    CardComponent
   ],
   imports: [
     BrowserModule,

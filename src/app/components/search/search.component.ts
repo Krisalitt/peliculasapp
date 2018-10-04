@@ -7,16 +7,15 @@ import { PeliculasService } from '../../services/peliculas.service';
   styles: []
 })
 export class SearchComponent {
-
+  movies: any[] = [];
   constructor(private _peliService: PeliculasService) {
-    this._peliService.searchMovie('batman')
-      .subscribe((data: any) => {
-        console.log(data);
-      });
   }
 
   searchMovie(termino: string) {
-    console.log(termino);
+    this._peliService.searchMovie(termino)
+      .subscribe((data: any) => {
+        this.movies = data.results;
+        console.log(this.movies);
+      });
   }
-
 }

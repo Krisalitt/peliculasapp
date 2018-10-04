@@ -1,0 +1,17 @@
+<div class="card-columns m-5">
+  <div *ngFor="let movie of movies"
+       class="card animated fadeIn puntero"
+       (click)="goToMovie(movie.id)">
+    <img class="card-img-top"
+         [src]="movie.backdrop_path | imageUrl"
+         alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <span *ngIf="movie.adult"
+            class="badge badge-danger">Adulto</span>
+      <span *ngIf="!movie.adult"
+            class="badge badge-info">Todo público</span>
+      <span class="badge badge-dark">{{ movie.release_date }}</span>
+    </div>
+  </div>
+</div>

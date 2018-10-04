@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PeliculasService } from '../../services/peliculas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomeComponent {
   movies: any[7] = [];
   moviesKids: any[7] = [];
   moviestheater: any[7] = [];
-  constructor(private _pelService: PeliculasService) {
+  constructor(private _pelService: PeliculasService, private _route: Router) {
     _pelService.getPopulars()
       .subscribe(
         (data: any) => {
@@ -36,5 +37,9 @@ export class HomeComponent {
           }
         }
       );
+  }
+
+  goToMovie(id: string) {
+    this._route.navigate(['movie', id]);
   }
 }
