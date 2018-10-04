@@ -2,7 +2,7 @@
 <hr>
 <div class="row animated fadeIn">
   <div class="col-4 text-center">
-    <img [src]="'http://image.tmdb.org/t/p/w300'+movie.poster_path"
+    <img [src]="movie.poster_path | imageUrl"
          class="img-fluid">
   </div>
   <div class="col-6 text-left">

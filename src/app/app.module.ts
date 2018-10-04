@@ -8,6 +8,7 @@ import { JsonpModule } from '@angular/http';
 import { SearchComponent } from './components/search/search.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { APP_ROUTING } from './app.routes';
+import { ImageUrlPipe } from './pipes/image-url.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { APP_ROUTING } from './app.routes';
     NavbarComponent,
     HomeComponent,
     SearchComponent,
-    MovieComponent
+    MovieComponent,
+    ImageUrlPipe
   ],
   imports: [
     BrowserModule,
