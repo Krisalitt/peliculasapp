@@ -13,6 +13,7 @@ export class MovieComponent {
     classProgressArr: string[] = ['bg-danger', 'bg-success', 'bg-warning'];
     classProgress: string;
     progressFill: {};
+    loading = true;
     constructor(private _peliService: PeliculasService,
         private _router: ActivatedRoute) {
         _router.params.subscribe(
@@ -24,6 +25,7 @@ export class MovieComponent {
                             // console.log(data);
                             this.movie = data;
                             this.setStyleProgressBar();
+                            this.loading = false;
                         });
             });
     }

@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SearchComponent {
   movies: any[] = [];
   searchP = '';
+  loading = false;
   constructor(private _peliService: PeliculasService,
     private _route: ActivatedRoute) {
     this._route.params
@@ -26,9 +27,11 @@ export class SearchComponent {
   }
 
   searchMovie(termino: string) {
+    this.loading = true;
     this._peliService.searchMovie(termino)
       .subscribe((data: any) => {
         this.movies = data.results;
+        this.loading = false;
         // console.log(this.movies);
       });
   }

@@ -1,39 +1,42 @@
-<div class="row animated fadeIn">
-    <h3>Populares</h3>
-    <hr>
-    <div class="col-md-12">
-        <div class="collage-container">
-            <img *ngFor="let movie of movies; let i = index"
-                 class="collage-img c{{i+1}} puntero"
-                 [title]="movie.title"
-                 (click)="goToMovie(movie.id)"
-                 [src]="movie.poster_path | imageUrl ">
+<app-loading *ngIf="loading"></app-loading>
+<div class="!loading">
+    <div class="row animated fadeIn">
+        <h3>Populares</h3>
+        <hr>
+        <div class="col-md-12">
+            <div class="collage-container">
+                <img *ngFor="let movie of movies; let i = index"
+                     class="collage-img c{{i+1}} puntero"
+                     [title]="movie.title"
+                     (click)="goToMovie(movie.id)"
+                     [src]="movie.poster_path | imageUrl ">
+            </div>
         </div>
     </div>
-</div>
-<div class="row animated fadeIn">
-    <h3>Populares entre los niños</h3>
-    <hr>
-    <div class="col-md-12">
-        <div class="collage-container">
-            <img *ngFor="let movieK of moviesKids; let i = index"
-                 class="collage-img c{{i+1}} puntero"
-                 [title]="movieK.title"
-                 (click)="goToMovie(movieK.id)"
-                 [src]="movieK.poster_path | imageUrl">
+    <div class="row animated fadeIn">
+        <h3>Populares entre los niños</h3>
+        <hr>
+        <div class="col-md-12">
+            <div class="collage-container">
+                <img *ngFor="let movieK of moviesKids; let i = index"
+                     class="collage-img c{{i+1}} puntero"
+                     [title]="movieK.title"
+                     (click)="goToMovie(movieK.id)"
+                     [src]="movieK.poster_path | imageUrl">
+            </div>
         </div>
     </div>
-</div>
-<div class="row animated fadeIn">
-    <h3>En cartelera</h3>
-    <hr>
-    <div class="col-md-12">
-        <div class="collage-container">
-            <img *ngFor="let movieT of moviestheater; let i = index"
-                 class="collage-img c{{i+1}} puntero"
-                 [title]="movieT.title"
-                 (click)="goToMovie(movieT.id)"
-                 [src]="movieT.poster_path | imageUrl">
+    <div class="row animated fadeIn">
+        <h3>En cartelera</h3>
+        <hr>
+        <div class="col-md-12">
+            <div class="collage-container">
+                <img *ngFor="let movieT of moviestheater; let i = index"
+                     class="collage-img c{{i+1}} puntero"
+                     [title]="movieT.title"
+                     (click)="goToMovie(movieT.id)"
+                     [src]="movieT.poster_path | imageUrl">
+            </div>
         </div>
     </div>
 </div>

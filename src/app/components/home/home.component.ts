@@ -11,6 +11,7 @@ export class HomeComponent {
   movies: any[7] = [];
   moviesKids: any[7] = [];
   moviestheater: any[7] = [];
+  loading = true;
   constructor(private _pelService: PeliculasService, private _route: Router) {
     _pelService.getPopulars()
       .subscribe(
@@ -34,6 +35,7 @@ export class HomeComponent {
         (data: any) => {
           for (let i = 0; i < 7; i++) {
             this.moviestheater[i] = data.results[i];
+            this.loading = false
           }
         }
       );
