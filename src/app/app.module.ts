@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
@@ -10,6 +11,7 @@ import { MovieComponent } from './components/movie/movie.component';
 import { APP_ROUTING } from './app.routes';
 import { ImageUrlPipe } from './pipes/image-url.pipe';
 import { CardComponent } from './components/share/card/card.component';
+import { LoadingComponent } from './components/share/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { CardComponent } from './components/share/card/card.component';
     SearchComponent,
     MovieComponent,
     ImageUrlPipe,
-    CardComponent
+    CardComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     JsonpModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

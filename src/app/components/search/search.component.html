@@ -3,6 +3,7 @@
     <input type="text"
            placeholder="Buscar película"
            name="btnSearch"
+           [value]="searchP"
            #search
            (keyup)="searchMovie(search.value)"
            class="form-control">
